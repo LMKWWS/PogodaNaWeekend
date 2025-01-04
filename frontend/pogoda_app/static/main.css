@@ -1,0 +1,36 @@
+.inline {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+label {
+    margin-right: 20px;  
+    color: aliceblue;
+}
+
+form.city-form {
+    margin-top: 50px;
+    justify-content: center;
+    border: 1px solid darkcyan;
+    border-radius: 10px;
+    padding: 20px;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.btn-outline-info {
+    color: aliceblue;
+    border-color: darkcyan;
+}
+
+body {
+    background-image: url('./images/poland.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    font-family: "Roboto", serif;
+}
