@@ -15,6 +15,7 @@ woj_choices = [
 ]
 
 class CityForm(FlaskForm):
-    city = StringField('Miasto', validators=[DataRequired()])
-    voivodeship = SelectField(u'Województwo', choices=woj_choices)
+    # city = StringField('Miasto', validators=[DataRequired()])
+    city = StringField('Miasto')
+    # voivodeship = SelectField(u'Województwo', choices=woj_choices)
     submit = SubmitField('Szukaj')
