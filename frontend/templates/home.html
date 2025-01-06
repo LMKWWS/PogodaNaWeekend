@@ -1,0 +1,14 @@
+{% extends "weather_form.html" %}
+{% block content %}
+<div class="content-section white-text">
+    <p>{{response['city_name']}}</p>
+    {% for day in response['forecast'] %}
+    <div class="info-row black-background">
+        Data: {{day}} 
+        temperatura: {{response['forecast'][day]['avgtemp_c']}}℃ 
+        szansa na deszcz: {{response['forecast'][day]['daily_chance_of_rain']}}%
+        <img class="condition-icon" src="{{response['forecast'][day]['condition_icon']}}"/>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

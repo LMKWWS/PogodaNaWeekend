@@ -2,6 +2,7 @@
 {% block weatherform %}
 <div class="content-section">
     <form method="POST" action="" class="inline city-form">
+        {{ form.hidden_tag() }}
         <fieldset class="form-group inline">
             <div class="form-group inline">
                 {{ form.city.label(class="form-control-label") }}
@@ -15,10 +16,6 @@
                 {% else %}
                     {{ form.city(class="form-control form-control-lg") }}
                 {% endif %}
-            </div>
-            <div class="form-group inline">
-            {{ form.voivodeship.label(class="form-control-label") }}
-            {{ form.voivodeship(class="form-control form-control-lg") }}
             </div>
         </fieldset>
         <div class="form-group">
