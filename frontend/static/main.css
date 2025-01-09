@@ -1,8 +1,26 @@
 .inline {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;    
+}
+
+.center-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;    
 }
 
 label {
@@ -30,7 +48,7 @@ body {
     background-image: url('./images/poland.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: darken;
     font-family: "Roboto", serif;
 }
@@ -40,5 +58,28 @@ body {
 }
 
 .black-background {
-    background-color: black;
+    /* background-color: black; */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+td {
+    width: 85vw;
+    border-radius: 10px;
+}
+td, tr {
+    padding: 20px;
+}
+table {
+    border-spacing: 20px;
+    border-collapse: separate;
+}
+
+img.margin-left {
+    margin-left: 50px;
+}
+
+span.blue {
+    color: rgb(0, 213, 213);
+    margin-left: 5px;
+    margin-right: 5px;
 }

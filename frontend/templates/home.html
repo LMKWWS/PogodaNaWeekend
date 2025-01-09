@@ -1,14 +1,49 @@
 {% extends "weather_form.html" %}
 {% block content %}
-<div class="content-section white-text">
-    <p>{{response['city_name']}}</p>
-    {% for day in response['forecast'] %}
-    <div class="info-row black-background">
-        Data: {{day}} 
-        temperatura: {{response['forecast'][day]['avgtemp_c']}}℃ 
-        szansa na deszcz: {{response['forecast'][day]['daily_chance_of_rain']}}%
-        <img class="condition-icon" src="{{response['forecast'][day]['condition_icon']}}"/>
-    </div>
+<div class="content-section white-text center-column">
+
+    <table>
+    {% if weather_data['city_name'] %}
+    <tr class="info-row"> <td class="black-background center">
+        <h2>{{weather_data['city_name']}}</h2>
+    </td></tr>
+    {% endif %}
+    {% for day in weather_data['forecast'] %}
+    <tr class="info-row"> <td class="black-background center">
+        Data: <span class="blue">{{day}}</span>
+        temperatura: {{weather_data['forecast'][day]['avgtemp_c']}}℃ 
+        szansa na deszcz: {{weather_data['forecast'][day]['daily_chance_of_rain']}}%
+        <img class="condition-icon margin-left" src="{{weather_data['forecast'][day]['condition_icon']}}"/>
+    </td></tr>
     {% endfor %}
+    </table>
+
+    <table>
+    {% if bookings_data|length > 0 %}
+    <tr class="info-row"> <td class="black-background center">
+        <h4>Znalezione Hotele: ( {{bookings_data|length}} )</h4>
+    </td></tr>
+    {% endif %}
+    {% for hotel in bookings_data %}
+    <tr class="info-row"> <td class="black-background inline">
+        <div>
+            <p>Hotel: {{hotel['name']}}</p>
+            <p>
+            {% if hotel['price_level'] != "brak" %}
+                Cena: {{hotel['price_level']}} 
+            {% endif %}
+            {% if hotel['rating'] != "brak" %}
+                Ocena: {{hotel['rating']}}
+            {% endif %}  
+            </p>
+            <p>Adres: {{hotel['address_obj']['address_string']}}</p>
+        </div>
+        <a href="{{hotel['web_url']}}">
+            <button class="btn btn-outline-info">Sprawdź ofertę</button> 
+        </a>
+
+    </td></tr>
+    {% endfor %}
+    </table>
 </div>
 {% endblock content %}
