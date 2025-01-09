@@ -18,9 +18,11 @@
                 {% endif %}
             </div>
         </fieldset>
+        {% if not api_errors%}
         <div class="form-group">
             {{ form.submit(class="btn btn-outline-info") }}
         </div>
+        {% endif %}
     </form>
 
     {% block content %}{% endblock %}

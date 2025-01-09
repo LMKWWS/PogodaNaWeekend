@@ -1,0 +1,17 @@
+{% extends "weather_form.html" %}
+{% block content %}
+<div class="content-section white-text center-column">
+    <table>
+        <tr class="info-row"> <td class="black-background center">
+            <p>{{error_code}}</p>
+        </td></tr>
+        <tr class="info-row"> <td class="black-background center">
+            <p>{{error_message}}</p>
+        </td></tr>
+
+    </table>
+    <a href="{{ url_for('home') }}">
+        <button class="btn btn-outline-info">Powrót</button> 
+    </a>
+</div>
+{% endblock content %}
