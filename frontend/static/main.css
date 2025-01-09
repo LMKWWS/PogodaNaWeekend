@@ -34,3 +34,11 @@ body {
     background-blend-mode: darken;
     font-family: "Roboto", serif;
 }
+
+.white-text {
+    color: aliceblue;
+}
+
+.black-background {
+    background-color: black;
+}
