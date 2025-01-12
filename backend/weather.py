@@ -7,7 +7,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-FORECAST_URL = "http://api.weatherapi.com/v1/forecast.json?key=427389676e874816a77164107250601"
+FORECAST_URL = "http://api.weatherapi.com/v1/forecast.json?key=<klucz__weather_api>"
 WA_DATE_FORMAT = "%Y-%m-%d"
 WA_FORECAST_KEYS = ['avgtemp_c', 'maxwind_kph', 'avghumidity', 'daily_chance_of_rain']
 
